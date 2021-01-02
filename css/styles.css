@@ -1,0 +1,189 @@
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+}
+:root{
+    --colorBotones:  rgb(80, 80, 80);
+}
+
+
+/* general */
+body{
+    background-image: url("../images/bg-body.png");
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    width: 100%;
+    padding: 10px;
+}
+a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+li{
+    list-style: none;
+}
+/* header */
+header{
+    text-align: center;
+    margin-bottom: 30px;
+}
+header img.logo{
+    width: 180px;
+    margin: 15px 0 30px 0;
+    border-radius: 90px;
+}
+header a.toggle-nav{
+    display: block;
+    margin-bottom: 20px;
+}
+header a.toggle-nav span{
+    background-color: var(--colorBotones);
+    padding: 8px;
+}
+header nav.main-nav li{
+    background-color: var(--colorBotones);
+    border:1px solid white;
+    padding: 5px;
+}
+
+/* banner */
+section.banner img{
+    display: none;
+}
+
+/* productos */
+.container section.vip-products{
+    width: 100%;
+}
+.container section.vip-products article{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.container section.vip-products article div.photo-container{
+    position: relative;
+    text-align: center;
+}
+.container section.vip-products article div.photo-container img.photo{
+    width: 100%;
+}
+.container section.vip-products article div.photo-container img.special{
+    position: absolute;
+    right: 5px;
+    top:0;
+}
+.container section.vip-products article div.photo-container a.zoom{
+    background-color: rgba(0,0,0, 0.5);
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    display: block;
+    top: 45%;
+    padding: 5px;
+}
+.container section.vip-products article.product h2{
+    margin: 15px 0;
+}
+.container section.vip-products article.product p{
+    margin-bottom: 20px;
+}
+.container section.vip-products article.product a.more{
+    background-color: var(--colorBotones);
+    text-transform: lowercase;
+    padding: 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* footer */
+footer.main-footer{
+    text-align: center;
+    margin-bottom: 30px;
+}
+footer.main-footer ul li{
+    background-color: firebrick;
+    border:1px solid white;
+    padding: 5px;
+}
+
+@media(min-width:426px){
+    /* header */
+    header a.toggle-nav{
+        display: none;
+    }
+    /* header nav.main-nav li{
+        display: inline-block;
+        width: 118px;
+    } */
+    header nav.main-nav li{
+        display: inline-block;
+        background-color: var(--colorBotones);
+        border:1px solid white;
+        padding:10px 5px;
+        width: 16.1%;
+        /* HAY QUE HACER ARREGLAR LA BARRA DE NAVEGACIÓN ACÁ */
+    }
+    /* banner */
+    section.banner img{
+        display: inline;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    /* main */
+    .container section.vip-products{
+        width: 100%;
+        overflow: hidden;
+    }
+    .container section.vip-products article{
+        width: 50%;
+        float: left;
+        padding: 10px;
+    }
+
+    /* footer */
+    footer.main-footer{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    footer.main-footer ul li{
+        background-color: firebrick;
+        border:1px solid white;
+        padding: 5px;
+    }
+}
+
+@media(min-width:769px){
+    .container{
+        max-width: 1180px;
+        width:100%;
+        padding-bottom: 0px;
+    }
+    
+    /* main */
+    .container section.vip-products article{
+        width: 33.3%;
+        float: left;
+        padding: 10px;
+    }
+
+    /* footer */
+    footer.main-footer{
+        text-align: center;
+        margin-bottom:0;
+        background-color: firebrick;
+        width: 100%;
+        height: 120px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        padding: 55px;
+    }
+    footer.main-footer ul li{
+        border: none;
+        padding: 5px;
+        display: inline;
+    }
+}
+
